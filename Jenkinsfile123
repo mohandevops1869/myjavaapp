@@ -1,0 +1,10 @@
+pipeline{
+    agent any
+    stages{
+        stage('git checkout'){
+            steps{
+                checkout scmGit(branches: [[name: '*/featurea']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/mohandevops1869/myjavaapp.git']])
+            }
+        }
+    }
+}
